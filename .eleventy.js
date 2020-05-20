@@ -129,7 +129,7 @@ module.exports = function (eleventyConfig) {
       output: siteConfig.paths.output,
     },
     passthroughFileCopy: true,
-    templateFormats: ['njk', 'md', 'css', 'svg', 'png', 'jpg', 'jpeg'],
+    templateFormats: ['njk', 'md'],
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
   }

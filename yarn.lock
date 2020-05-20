@@ -78,7 +78,7 @@
     invariant "^2.2.4"
     semver "^5.5.0"
 
-"@babel/core@^7.4.4":
+"@babel/core@^7.4.4", "@babel/core@^7.9.6":
   version "7.9.6"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.9.6.tgz#d9aa1f580abf3b2286ef40b6904d390904c63376"
   integrity sha512-nD3deLvbsApbHAHttzIssYqgb883yU/d9roe4RZymBCDaZryMJDbptVpEpeQuRh4BJ+SYI8le9YGxKvFEvl1Wg==
@@ -1033,6 +1033,13 @@
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-2.1.1.tgz#ceff6a28a5b4867c2dd4a1ba513de278ccbe8bb1"
   integrity sha512-/aPsuoj/1Dw/kzhkgz+ES6TxG0zfTMGLwuK2ZG00k/iJzYHTLCE8mVU8EPqEOp/lmxPoq1C1C9RYToRKb2KEfg==
+
+"@snowpack/plugin-babel@^0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@snowpack/plugin-babel/-/plugin-babel-0.6.2.tgz#a028ebb1d7638cc11d713b004a50d76f95f2b470"
+  integrity sha512-1gp/pWWPaTJ/veMNVHfcSeKx+XN2qLpgpn640jAyL0u1LK/1RG9Qdf44xv5mQuy1I2HnJU1UqqrbszNxsTGDbQ==
+  dependencies:
+    "@babel/core" "^7.9.6"
 
 "@szmarczak/http-timer@^4.0.5":
   version "4.0.5"

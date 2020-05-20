@@ -2,6 +2,9 @@
   "emmet.includeLanguages": {
     "njk": "html",
   },
+  "files.associations": {
+    "*.css": "postcss"
+  },
   "editor.formatOnSave": true,
   "markdownlint.config": {
     "MD033": false

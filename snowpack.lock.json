@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "turbolinks": "https://cdn.pika.dev/pin/turbolinks@v5.2.0-4ClnPdczSSCaiVgNHRHZ/turbolinks.js"
+  }
+}

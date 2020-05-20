@@ -13,9 +13,6 @@ module.exports = {
           reduceIdents: false,
         },
       ],
-    }),
-    require('postcss-reporter')({
-      clearReportedMessages: true,
-    }),
+    })
   ],
 }

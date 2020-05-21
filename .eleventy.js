@@ -72,7 +72,7 @@ module.exports = function (eleventyConfig) {
       input: 'src',
       includes: 'components',
       layouts: 'components/layouts',
-      output: '11ty_build',
+      output: '_output',
     },
   }
 }

@@ -7,7 +7,6 @@ const htmlDate = require('./utils/filters/htmlDate.js')
 const date = require('./utils/filters/date.js')
 
 module.exports = function (eleventyConfig) {
-
   /**
    * Add Plugins
    * @link https://github.com/11ty/eleventy-plugin-rss
@@ -47,37 +46,33 @@ module.exports = function (eleventyConfig) {
    */
   // Blog posts collection
   const now = new Date()
-  const livePosts = post => post.date <= now && !post.data.draft
-  eleventyConfig.addCollection('posts', collection => {
+  const livePosts = (post) => post.date <= now && !post.data.draft
+  eleventyConfig.addCollection('posts', (collection) => {
     return [
-      ...collection
-      .getFilteredByGlob(
-        "./src/blog/**/*"
-      )
-      .filter(livePosts),
+      ...collection.getFilteredByGlob('./src/blog/**/*').filter(livePosts),
     ]
   })
 
   eleventyConfig.setTemplateFormats([
     // Templates:
-    "html",
-    "njk",
-    "md",
+    'html',
+    'njk',
+    'md',
     // Static Assets:
-    "css",
-    "svg",
-    "png",
-    "jpg",
-    "jpeg",
-  ]);
-  eleventyConfig.addPassthroughCopy("static");
+    'css',
+    'svg',
+    'png',
+    'jpg',
+    'jpeg',
+  ])
+  eleventyConfig.addPassthroughCopy('static')
 
   return {
     dir: {
-      input: "src",
-      includes: "components",
-      layouts: "components/layouts",
-      output: "_output",
+      input: 'src',
+      includes: 'components',
+      layouts: 'components/layouts',
+      output: '11ty_build',
     },
-  };
-};
+  }
+}

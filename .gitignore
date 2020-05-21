@@ -1,7 +1,7 @@
 .build
 build
 web_modules
-
+_output
 
 # Created by https://www.gitignore.io/api/node,linux,macos,windows,visualstudio
 # Edit at https://www.gitignore.io/?templates=node,linux,macos,windows,visualstudio

@@ -1,7 +1,7 @@
 const siteConfig = require('../../site.config')
 
 module.exports = {
-  name: siteConfig.name,
+  title: siteConfig.title,
   shortDesc: siteConfig.shortDesc,
   url: siteConfig.url,
   lang: siteConfig.lang,

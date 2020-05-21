@@ -42,7 +42,6 @@ module.exports = function (eleventyConfig) {
   /**
    * Create custom data collections
    * for blog and feed
-   * Code from https://github.com/hankchizljaw/hylia
    */
   // Blog posts collection
   const now = new Date()
@@ -53,6 +52,10 @@ module.exports = function (eleventyConfig) {
     ]
   })
 
+  /**
+   * Specify which types of templates should be transformed.
+   * @link https://www.11ty.dev/docs/config/#template-formats
+   */
   eleventyConfig.setTemplateFormats([
     // Templates:
     'html',

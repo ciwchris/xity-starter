@@ -35,18 +35,18 @@ A blog-ready 11ty starter based on PostCSS and Parcel, with a RSS feed and Nativ
 - [Turbolinks][] makes navigating your web application faster
 - [What Input][] to show outline only when navigating with keyboard
 
-[Eleventy]: https://11ty.dev "Static site generator"
-[PostCSS]: https://postcss.org "A tool for transforming CSS with JavaScript"
-[PostCSS Preset Env]: https://preset-env.cssdb.org "Use tomorrow’s CSS today"
-[cssnano]: https://cssnano.co "A modular minifier based on the PostCSS ecosystem"
-[Parcel]: https://parceljs.org "Web application bundler"
-[Turbolinks]: https://github.com/turbolinks/turbolinks
-[What Input]: https://github.com/ten1seven/what-input "A global utility for tracking the current input method"
-[Native Elements]: https://native-elements.stackblitz.io
-[eleventy-plugin-pwa]: https://github.com/okitavera/eleventy-plugin-pwa "An Eleventy plugin to generate service worker"
-[Browsersync]: https://www.npmjs.com/package/browser-sync "Time-saving synchronised browser testing"
-[Node.js]: https://nodejs.org/
-[Yarn]: https://yarnpkg.com/ "Package Manager"
+[eleventy]: https://11ty.dev 'Static site generator'
+[postcss]: https://postcss.org 'A tool for transforming CSS with JavaScript'
+[postcss preset env]: https://preset-env.cssdb.org 'Use tomorrow’s CSS today'
+[cssnano]: https://cssnano.co 'A modular minifier based on the PostCSS ecosystem'
+[parcel]: https://parceljs.org 'Web application bundler'
+[turbolinks]: https://github.com/turbolinks/turbolinks
+[what input]: https://github.com/ten1seven/what-input 'A global utility for tracking the current input method'
+[native elements]: https://native-elements.stackblitz.io
+[eleventy-plugin-pwa]: https://github.com/okitavera/eleventy-plugin-pwa 'An Eleventy plugin to generate service worker'
+[browsersync]: https://www.npmjs.com/package/browser-sync 'Time-saving synchronised browser testing'
+[node.js]: https://nodejs.org/
+[yarn]: https://yarnpkg.com/ 'Package Manager'
 
 ---
 
@@ -114,7 +114,7 @@ Here are the default settings you will get with this project structure:
   // Tip payment url, if you want to monetize your site
   "paymentPointer": "$twitter.xrptipbot.com/equinusocio",
 
-  // Code highlight theme, must reflect the file name inside /assets/css.
+  // Code highlight theme, must reflect the file name inside /css.
   // Remove to disable it
   "syntaxTheme": "prism-material-light.css",
 

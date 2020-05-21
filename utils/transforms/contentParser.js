@@ -1,13 +1,13 @@
 const jsdom = require('@tbranyen/jsdom')
 const { JSDOM } = jsdom
 const slugify = require('slugify')
-const eleventyConfig = require('../../src/_data/config.json')
+const siteConfig = require('../../site.config')
 
 function setClass(element, list) {
-  list.map(item => element.classList.add(item))
+  list.map((item) => element.classList.add(item))
 }
 
-module.exports = function(value, outputPath) {
+module.exports = function (value, outputPath) {
   if (outputPath.endsWith('.html')) {
     /**
      * create the document model
@@ -20,7 +20,7 @@ module.exports = function(value, outputPath) {
      */
     const images = [...document.querySelectorAll('main article img')]
     if (images.length) {
-      images.forEach(image => {
+      images.forEach((image) => {
         /**
          * Set the loading attribute to all
          * the images to be lazy loaded if supported
@@ -44,7 +44,7 @@ module.exports = function(value, outputPath) {
           /**
            * Add custom class to the figure elements inside posts
            */
-          setClass(figure, eleventyConfig.figureClass)
+          setClass(figure, siteConfig.figureClasses)
           /**
            * Clone image inside figure
            * and add the figcaption element
@@ -64,7 +64,7 @@ module.exports = function(value, outputPath) {
      */
     const articleHeadings = [
       ...document.querySelectorAll(
-        'article h2, article h3, article h4, article h5, article h6'
+        'article h2, article h3, article h4, article h5, article h6',
       ),
     ]
     if (articleHeadings.length) {
@@ -72,7 +72,7 @@ module.exports = function(value, outputPath) {
        * Create an ahcor element inside each post heading
        * to link to the secion
        */
-      articleHeadings.forEach(heading => {
+      articleHeadings.forEach((heading) => {
         // Create the anchor element
         const anchor = document.createElement('a')
         // Create the anchor slug
@@ -80,7 +80,7 @@ module.exports = function(value, outputPath) {
         // Set the anchor href based on the generated slug
         anchor.setAttribute('href', `#${headingSlug}`)
         // Add class and content to the anchor
-        setClass(anchor, eleventyConfig.permalinkClass)
+        setClass(anchor, siteConfig.permalinkClasses)
         anchor.innerHTML = '#'
         // Set the ID attribute with the slug
         heading.setAttribute('id', `${headingSlug}`)
@@ -94,10 +94,10 @@ module.exports = function(value, outputPath) {
      */
     const articleEmbeds = [...document.querySelectorAll('main article iframe')]
     if (articleEmbeds.length) {
-      articleEmbeds.forEach(embed => {
+      articleEmbeds.forEach((embed) => {
         const wrapper = document.createElement('div')
         embed.setAttribute('loading', 'lazy')
-        setClass(wrapper, eleventyConfig.iframeClass)
+        setClass(wrapper, siteConfig.iframeClasses)
         wrapper.appendChild(embed.cloneNode(true))
         embed.replaceWith(wrapper)
       })
@@ -108,9 +108,9 @@ module.exports = function(value, outputPath) {
      */
     const codeSnippets = [...document.querySelectorAll('pre[class^="language"')]
     if (codeSnippets.length) {
-      codeSnippets.forEach(embed => {
+      codeSnippets.forEach((embed) => {
         const wrapper = document.createElement('div')
-        setClass(wrapper, eleventyConfig.codeClass)
+        setClass(wrapper, siteConfig.codeClasses)
         wrapper.appendChild(embed.cloneNode(true))
         embed.replaceWith(wrapper)
       })
@@ -122,7 +122,7 @@ module.exports = function(value, outputPath) {
      */
     const links = [...document.querySelectorAll('a[href]')]
     if (links.length) {
-      links.forEach(link => {
+      links.forEach((link) => {
         /**
          * For each link found get all the original attributes
          * and apply them to the custom link element
@@ -133,7 +133,7 @@ module.exports = function(value, outputPath) {
           for (var i = linkAttributes.length - 1; i >= 0; i--) {
             externalLink.setAttribute(
               linkAttributes[i].name,
-              linkAttributes[i].value
+              linkAttributes[i].value,
             )
           }
         }
@@ -150,7 +150,7 @@ module.exports = function(value, outputPath) {
             'rel',
             currentRel && !currentRel.includes('noopener')
               ? `${currentRel} noopener noreferrer`
-              : 'noopener noreferrer'
+              : 'noopener noreferrer',
           )
         }
         externalLink.innerHTML = link.innerHTML

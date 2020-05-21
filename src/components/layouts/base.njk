@@ -5,7 +5,7 @@
     <link rel="alternate" type="application/rss+xml" title="{{ config.title }}" href="{{ config.url }}/feed.xml"/>
     {% include "meta.njk" %}
     <link rel="icon" href="/favicon.png" type="image/png"/>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@0.6.0/modern-normalize.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@native-elements/core/dist/native-elements.min.css"/>
     {% block head %}{% endblock %}
@@ -16,6 +16,7 @@
     <script src="/js/app.js" type="module" defer></script>
   </head>
   <body>
+    {{env.IS_DEV}}
     {% block content %}{% endblock content %}
     <script>
       {% if not env.IS_DEV %}

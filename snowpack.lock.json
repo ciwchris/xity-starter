@@ -1,5 +1,5 @@
 {
   "imports": {
-    "turbolinks": "https://cdn.pika.dev/pin/turbolinks@v5.2.0-4ClnPdczSSCaiVgNHRHZ/turbolinks.js"
+    "canvas-confetti": "https://cdn.pika.dev/pin/canvas-confetti@v1.2.0-kzcveexqNXJywloAjiQb/canvas-confetti.js"
   }
 }

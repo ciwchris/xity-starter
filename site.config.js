@@ -1,7 +1,4 @@
 module.exports = {
-  /**
-   * Site meta and user's data
-   */
   title: 'Eleventy blog/site starter',
   shortDesc: 'Short site description',
   url: 'http://localhost:8080',

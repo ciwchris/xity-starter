@@ -65,7 +65,6 @@ module.exports = function (eleventyConfig) {
     'jpg',
     'jpeg',
   ])
-  eleventyConfig.addPassthroughCopy('static')
 
   return {
     dir: {

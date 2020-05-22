@@ -16,16 +16,15 @@
     <script src="/js/app.js" type="module" defer></script>
   </head>
   <body>
-    {{env.IS_DEV}}
     {% block content %}{% endblock content %}
+    {% if env.IS_DEV == false %}
     <script>
-      {% if not env.IS_DEV %}
-        /*if ('serviceWorker' in navigator) {
-          window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/service-worker.js');
-          });
-        }*/
-      {% endif %}
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js');
+        });
+      }
     </script>
+    {% endif %}
   </body>
 </html>
